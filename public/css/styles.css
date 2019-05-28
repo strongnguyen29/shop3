@@ -1,0 +1,11 @@
+.header {
+    min-height: 100px;
+}
+
+.main-menu {
+    background: #f8f9fa;
+}
+
+.main-menu .navbar {
+    background: transparent;
+}
