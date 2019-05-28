@@ -12,11 +12,11 @@
                 </div>
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="col-md-12"><h3>SẢN PHẨM MỚI</h3></div>
+                        <div class="col-md-12"><h3>{{$titlePage}}</h3></div>
                         @foreach($products as $product)
                             <div class="col-md-4">
                                 <div class="card" style="width: 100%;">
-                                    <img src="{{asset('img/sanpham/' . $product->img)}}" class="card-img-top" alt="{{$product->name}}">
+                                    <img src="{{asset('img/' . $product->img)}}" class="card-img-top" alt="{{$product->name}}">
                                     <div class="card-body">
                                         <h5 class="card-title">{{$product->name}}</h5>
                                         <h6 class="text-danger">Giá: {{number_format($product->price)}} VNĐ</h6>

@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'frontend\HomeController@index')->name('home');
+
+Route::get('/{category_slug}', 'frontend\HomeController@category')->name('product');

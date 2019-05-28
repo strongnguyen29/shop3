@@ -13,6 +13,7 @@ class Category extends Model
      */
     protected $table = 'db_category';
 
+
     public static function getCategories() {
 
         return Category::where(['status' => 1, 'parentid' => 0])->get();

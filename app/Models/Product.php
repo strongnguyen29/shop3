@@ -28,7 +28,7 @@ class Product extends Model
      * Lấy san phẩm theo category ID;
      *
      * @param $category_id
-     * @return bool|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
      */
     public static function getProductsByCategory($category_id) {
         $listProduct = Product::query()
@@ -37,7 +37,7 @@ class Product extends Model
             ->where(Product::TABLE_CAT_PRO.'.category_id', '=', $category_id)
             ->get();
 
-        return count($listProduct) > 0 ? $listProduct : false;
+        return $listProduct;
     }
 
     /**
